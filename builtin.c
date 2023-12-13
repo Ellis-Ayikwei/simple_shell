@@ -90,25 +90,18 @@ int _shelp(info_t *info)
 	char **arg_array;
 
 	arg_array = info->argv;
-_puts("Simple Shell Help Menu:\n");
-    _puts("  help        Display this help menu\n");
-    _puts("  cd          Change current directory\n");
-    _puts("  exit        Exit the shell\n");
-    _puts("  env         Display the environment variables\n");
-    _puts("  history     Display command history\n");
-    _puts("  alias       Display or set command aliases\n");
-    _puts("  setenv      Set environment variables\n");
-    _puts("  unsetenv    Unset environment variables\n");
-
-    _puts("\nCommand Details:\n");
-    _puts("  help        - Display information about available commands\n");
-    _puts("  cd          - Change current directory. Usage: cd [directory]\n");
-    _puts("  exit        - Exit the shell. Usage: exit [status]\n");
-    _puts("  env         - Display environment variables\n");
-    _puts("  history     - Display command history\n");
-    _puts("  alias       - Display or set command aliases\n");
-    _puts("  setenv      - Set environment variables. Usage: setenv VARIABLE VALUE\n");
-    _puts("  unsetenv    - Unset environment variables. Usage: unsetenv VARIABLE\n");	
+	_puts("Simple Shell Help Menu:\n");
+	_puts("\nCommand Details:\n");
+	_puts("  help        - Display information about available commands\n");
+	_puts("  cd          - Change current directory. Usage: cd [directory]\n");
+	_puts("  exit        - Exit the shell. Usage: exit [status]\n");
+	_puts("  env         - Display environment variables\n");
+	_puts("  history     - Display command history\n");
+	_puts("  alias       - Display or set command aliases\n");
+	_puts("  setenv      - Set environment variables.
+			Usage: setenv VARIABLE VALUE\n");
+	_puts(" unsetenv    - Unset environment variables.
+			Usage: unsetenv VARIABLE\n");
 	if (0)
 		_puts(*arg_array); /* temp att_unused workaround */
 	return (0);
