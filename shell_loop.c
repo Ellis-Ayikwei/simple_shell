@@ -1,4 +1,3 @@
-shell_loop.c
 #include "shell.h"
 
 /**
