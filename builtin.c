@@ -98,10 +98,10 @@ int _shelp(info_t *info)
 	_puts("  env         - Display environment variables\n");
 	_puts("  history     - Display command history\n");
 	_puts("  alias       - Display or set command aliases\n");
-	_puts("  setenv      - Set environment variables.
-			Usage: setenv VARIABLE VALUE\n");
-	_puts(" unsetenv    - Unset environment variables.
-			Usage: unsetenv VARIABLE\n");
+	_puts("  setenv      - Set environment variables."
+			"Usage: setenv VARIABLE VALUE\n");
+	_puts(" unsetenv    - Unset environment variables."
+			"Usage: unsetenv VARIABLE\n");
 	if (0)
 		_puts(*arg_array); /* temp att_unused workaround */
 	return (0);
