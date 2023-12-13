@@ -1,13 +1,13 @@
 #include "shell.h"
 
 /**
- * _myexit - exits the shell
+ * _shexit - exits the shell
  * @info: Structure containing potential arguments. Used to maintain
  *          constant function prototype.
  *  Return: exits with a given exit status
  *         (0) if info.argv[0] != "exit"
  */
-int _myexit(info_t *info)
+int _shexit(info_t *info)
 {
 	int exitcheck;
 
@@ -30,12 +30,12 @@ int _myexit(info_t *info)
 }
 
 /**
- * _mycd - changes the current directory of the process
+ * _shcd - changes the current directory of the process
  * @info: Structure containing potential arguments. Used to maintain
  *          constant function prototype.
  *  Return: Always 0
  */
-int _mycd(info_t *info)
+int _shcd(info_t *info)
 {
 	char *s, *dir, buffer[1024];
 	int chdir_ret;
@@ -80,18 +80,37 @@ int _mycd(info_t *info)
 }
 
 /**
- * _myhelp - changes the current directory of the process
+ * _shhelp - changes the current directory of the process
  * @info: Structure containing potential arguments. Used to maintain
  *          constant function prototype.
  *  Return: Always 0
  */
-int _myhelp(info_t *info)
+int _shelp(info_t *info)
 {
 	char **arg_array;
 
 	arg_array = info->argv;
-	_puts("help call works. Function not yet implemented \n");
+_puts("Simple Shell Help Menu:\n");
+    _puts("  help        Display this help menu\n");
+    _puts("  cd          Change current directory\n");
+    _puts("  exit        Exit the shell\n");
+    _puts("  env         Display the environment variables\n");
+    _puts("  history     Display command history\n");
+    _puts("  alias       Display or set command aliases\n");
+    _puts("  setenv      Set environment variables\n");
+    _puts("  unsetenv    Unset environment variables\n");
+
+    _puts("\nCommand Details:\n");
+    _puts("  help        - Display information about available commands\n");
+    _puts("  cd          - Change current directory. Usage: cd [directory]\n");
+    _puts("  exit        - Exit the shell. Usage: exit [status]\n");
+    _puts("  env         - Display environment variables\n");
+    _puts("  history     - Display command history\n");
+    _puts("  alias       - Display or set command aliases\n");
+    _puts("  setenv      - Set environment variables. Usage: setenv VARIABLE VALUE\n");
+    _puts("  unsetenv    - Unset environment variables. Usage: unsetenv VARIABLE\n");	
 	if (0)
 		_puts(*arg_array); /* temp att_unused workaround */
 	return (0);
 }
+

@@ -1,4 +1,3 @@
-
 #ifndef _SHELL_H_
 #define _SHELL_H_
 
@@ -12,7 +11,6 @@
 #include <limits.h>
 #include <fcntl.h>
 #include <errno.h>
-#include <stddef.h>
 
 /* for read/write buffers */
 #define READ_BUF_SIZE 1024
@@ -113,13 +111,13 @@ typedef struct builtin
 } builtin_table;
 
 
-/* toem_shloop.c */
+/* shloop.c */
 int hsh(info_t *, char **);
 int find_builtin(info_t *);
 void find_cmd(info_t *);
 void fork_cmd(info_t *);
 
-/* toem_parser.c */
+/* parser.c */
 int is_cmd(info_t *, char *);
 char *dup_chars(char *, int, int);
 char *find_path(info_t *, char *, char *);
@@ -176,15 +174,16 @@ char *convert_number(long int, int, int);
 void remove_comments(char *);
 
 /* builtin.c */
-int _myexit(info_t *);
-int _mycd(info_t *);
-int _myhelp(info_t *);
+int _shexit(info_t *);
+int _shcd(info_t *);
+int _shelp(info_t *);
+
 
 /* builtin1.c */
-int _myhistory(info_t *);
-int _myalias(info_t *);
+int _shhistory(info_t *);
+int _shalias(info_t *);
 
-/* getline.c */
+/*getline.c */
 ssize_t get_input(info_t *);
 int _getline(info_t *, char **, size_t *);
 void sigintHandler(int);
@@ -196,9 +195,9 @@ void free_info(info_t *, int);
 
 /* environ.c */
 char *_getenv(info_t *, const char *);
-int _myenv(info_t *);
-int _mysetenv(info_t *);
-int _myunsetenv(info_t *);
+int _shenv(info_t *);
+int _shsetenv(info_t *);
+int _shunsetenv(info_t *);
 int populate_env_list(info_t *);
 
 /* getenv.c */
@@ -235,3 +234,4 @@ int replace_vars(info_t *);
 int replace_string(char **, char *);
 
 #endif /* SHELL.H */
+
