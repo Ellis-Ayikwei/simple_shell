@@ -283,7 +283,7 @@ $
 
 ## Authors :black_nib:
 
-*Ellis Armah Ayikwei :ghana
+*Ellis Armah Ayikwei 🇬🇭
 
 ## Acknowledgements :pray:
 
