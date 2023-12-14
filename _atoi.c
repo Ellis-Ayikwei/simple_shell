@@ -1,22 +1,24 @@
 #include "shell.h"
-
 /**
- * interactive - returns true if shell is interactive mode
- * @info: struct address
+ * interactive - Checks if the shell is running in interactive mode.
+ * @info: Pointer to the info_t struct.
  *
- * Return: 1 if interactive mode, 0 otherwise
+ * Return: 1 if the shell is in interactive mode, 0 otherwise.
  */
+
 int interactive(info_t *info)
 {
 	return (isatty(STDIN_FILENO) && info->readfd <= 2);
 }
 
 /**
- * is_delim - checks if character is a delimeter
- * @c: the char to check
- * @delim: the delimeter string
- * Return: 1 if true, 0 if false
+ * is_delim - Checks if a character is a delimiter.
+ * @c: The character to check.
+ * @delim: The delimiter string.
+ *
+ * Return: 1 if the character is a delimiter, 0 otherwise.
  */
+
 int is_delim(char c, char *delim)
 {
 	while (*delim)
@@ -26,9 +28,10 @@ int is_delim(char c, char *delim)
 }
 
 /**
- *_isalpha - checks for alphabetic character
- *@c: The character to input
- *Return: 1 if c is alphabetic, 0 otherwise
+ * _isalpha - Checks if a character is alphabetic.
+ * @c: The character to check.
+ *
+ * Return: 1 if the character is alphabetic, 0 otherwise.
  */
 
 int _isalpha(int c)
@@ -72,3 +75,4 @@ int _atoi(char *s)
 
 	return (output);
 }
+
